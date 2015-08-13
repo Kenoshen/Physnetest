@@ -1,0 +1,44 @@
+version = '0.1.0'
+
+apply plugin: 'java'
+apply plugin: 'idea'
+apply plugin: 'eclipse'
+apply plugin: 'application'
+
+mainClassName = "com.bytebreak.physnetest.Application"
+
+ext.server = 'http://www.bytebreakstudios.com:8081/artifactory'
+
+repositories.maven { url "$server/all" }
+
+ext.gdxVersion = '1.6.4'
+dependencies {
+    compile "com.badlogicgames.gdx:gdx-controllers:$gdxVersion"
+    compile "com.badlogicgames.gdx:gdx:$gdxVersion"
+    compile "com.badlogicgames.gdx:gdx-tools:$gdxVersion"
+    compile "com.badlogicgames.gdx:gdx-box2d:$gdxVersion"
+    compile "com.badlogicgames.gdx:gdx-backend-lwjgl:$gdxVersion"
+    compile "com.badlogicgames.gdx:gdx-platform:$gdxVersion:natives-desktop"
+    compile "com.badlogicgames.gdx:gdx-box2d-platform:$gdxVersion:natives-desktop"
+}
+
+configurations.all {
+    resolutionStrategy.cacheChangingModulesFor 0, 'seconds'
+}
+
+task fatJar(type: Jar, dependsOn: 'compileJava') {
+    baseName = project.name + "-all"
+    manifest {
+        attributes 'Main-Class': mainClassName
+    }
+    from {
+        sourceSets.main.output.classesDir
+    }
+    from {
+        configurations.compile.collect {
+            it.isDirectory() ? it : zipTree(it)
+        }
+    }
+    with jar
+}
+fatJar.dependsOn build
