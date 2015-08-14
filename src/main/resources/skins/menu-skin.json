@@ -1,0 +1,56 @@
+{
+  "com.badlogic.gdx.graphics.Color": {
+    "white": { "r": 1, "g": 1, "b": 1, "a": 1 },
+    "black": { "r": 0, "g": 0, "b": 0, "a": 1 },
+    "green": { "r": 0, "g": 1, "b": 0, "a": 1 },
+  },
+  "com.badlogic.gdx.graphics.g2d.BitmapFont": {
+    "chalkFont": {
+      "file": "fonts/chalk.fnt"
+    }
+  },
+  "com.badlogic.gdx.scenes.scene2d.ui.Skin$TintedDrawable": {
+    "simple-black": {
+      "name": "simple",
+      "color": "black"
+    },
+    "simple-down-black": {
+      "name": "simple-down",
+      "color": "black"
+    },
+    "flare-green": {
+      "name": "flare",
+      "color": "green"
+    },
+    "flare-down-green": {
+      "name": "flare-down",
+      "color": "green"
+    }
+  },
+  "com.badlogic.gdx.scenes.scene2d.ui.TextField$TextFieldStyle":{
+    "default":{
+      "font": "chalkFont",
+      "fontColor": "white",
+      "background": "simple-black",
+      "cursor": "simple",
+      "messageFont": "chalkFont",
+      "messageFontColor": "white"
+    }
+  },
+  "com.badlogic.gdx.scenes.scene2d.ui.TextButton$TextButtonStyle": {
+    "simple": {
+      "up": "simple-black" ,
+      "down": "simple-down-black",
+      "font": "chalkFont",
+      "fontColor": "green",
+      "pressedOffsetY": -4
+    },
+    "flare": {
+      "up": "flare-green" ,
+      "down": "flare-down-green",
+      "font": "chalkFont",
+      "fontColor": "white",
+      "pressedOffsetY": -4
+    }
+  }
+}

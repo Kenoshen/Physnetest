@@ -1,0 +1,20 @@
+
+ui-background.png
+size: 1024,1024
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+bitdecaywallpaper
+  rotate: false
+  xy: 2, 313
+  size: 550, 309
+  orig: 550, 309
+  offset: 0, 0
+  index: -1
+ludumdarewallpaper
+  rotate: false
+  xy: 2, 2
+  size: 550, 309
+  orig: 550, 309
+  offset: 0, 0
+  index: -1

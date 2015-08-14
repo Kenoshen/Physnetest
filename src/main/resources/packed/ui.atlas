@@ -1,0 +1,54 @@
+
+ui.png
+size: 512,64
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+flare
+  rotate: false
+  xy: 156, 4
+  size: 48, 48
+  split: 19, 13, 20, 7
+  orig: 48, 48
+  offset: 0, 0
+  index: -1
+flare-down
+  rotate: false
+  xy: 106, 4
+  size: 48, 48
+  split: 15, 7, 12, 18
+  pad: 8, 7, 12, 18
+  orig: 48, 48
+  offset: 0, 0
+  index: -1
+flareChecked
+  rotate: false
+  xy: 2, 2
+  size: 50, 50
+  orig: 50, 50
+  offset: 0, 0
+  index: -1
+flareUp
+  rotate: false
+  xy: 54, 2
+  size: 50, 50
+  orig: 50, 50
+  offset: 0, 0
+  index: -1
+simple
+  rotate: false
+  xy: 256, 4
+  size: 48, 48
+  split: 5, 5, 5, 5
+  pad: 4, 5, 5, 5
+  orig: 48, 48
+  offset: 0, 0
+  index: -1
+simple-down
+  rotate: false
+  xy: 206, 4
+  size: 48, 48
+  split: 5, 5, 5, 5
+  orig: 48, 48
+  offset: 0, 0
+  index: -1
